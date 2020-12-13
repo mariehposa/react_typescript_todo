@@ -11,6 +11,7 @@ const App: React.FC = () => {
   return (
     <>
       <TodoItem todo={data[0]}/>
+      <TodoItem todo={data[1]}/>
     </>
   );
 }
