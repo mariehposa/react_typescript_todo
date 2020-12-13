@@ -2,7 +2,8 @@ import React from 'react';
 import { Todo } from "../utils/types";
 
 interface TodoItemProp {
-    todo: Todo
+    todo: Todo,
+    changeTodo: (selectedTodo: Todo) => void;
 }
 
 export const TodoItem: React.FC<TodoItemProp> = ({todo}) => {
