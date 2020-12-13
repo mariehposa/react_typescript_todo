@@ -9,7 +9,7 @@ export const TodoItem: React.FC<TodoItemProp> = ({todo}) => {
     return (
         <div>
             <input type="checkbox" checked={todo.isCompleted} />
-            <p>{todo.item}</p>
+            <p style={{textDecoration: todo.isCompleted ? "line-through" : "none"}}>{todo.item}</p>
             <button>Add</button>
         </div>
     );

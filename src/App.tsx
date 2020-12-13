@@ -10,7 +10,7 @@ const data: Array<Todo> = [
 const App: React.FC = () => {
   return (
     <>
-      <TodoItem todo={data}/>
+      <TodoItem todo={data[0]}/>
     </>
   );
 }
