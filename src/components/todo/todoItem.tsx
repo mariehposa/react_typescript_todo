@@ -7,10 +7,11 @@ interface TodoItemProp {
     };
 }
 
-export const TodoItem = () => {
+export const TodoItem: React.FC<TodoItemProp> = ({todo}) => {
     return (
         <div>
-            <input type="text" />
+            <input type="checkbox" checked={todo.isCompleted} />
+            <p>{todo.item}</p>
             <button>Add</button>
         </div>
     );
