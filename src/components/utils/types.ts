@@ -3,4 +3,4 @@ export type Todo = {
     isCompleted: boolean
 };
 
-export type changeTodo = (selectedTodo: Todo) => void;
+export type ChangeTodo = (selectedTodo: Todo) => void;

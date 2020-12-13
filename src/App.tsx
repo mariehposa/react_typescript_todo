@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TodoItem } from './components/todo/todoItem';
-import { Todo } from "./components/utils/types";
+import { ChangeTodo, Todo } from "./components/utils/types";
 
 const data: Array<Todo> = [
   {item: 'Wash the dishes', isCompleted: true},
@@ -10,14 +10,16 @@ const data: Array<Todo> = [
 const App: React.FC = () => {
   const [ todo, setTodo ] = useState(data)
 
-  const changeTodo = (selectedTodo) => {
+  const changeTodo: ChangeTodo = (selectedTodo) => {
     const newTodo = todo.map(todo => {
-      if (selectedTodo === todo) { 
+      if (todo === selectedTodo) { 
+        console.log('toggle')
         return {
           ...todo, 
           isCompleted: !todo.isCompleted
         }
       }
+      console.log('untoggle')
       return todo
     })
     setTodo(newTodo)

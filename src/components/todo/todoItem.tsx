@@ -1,17 +1,17 @@
 import React from 'react';
-import { Todo } from "../utils/types";
+import { ChangeTodo, Todo } from "../utils/types";
 
 interface TodoItemProp {
     todo: Todo,
-    changeTodo: (selectedTodo: Todo) => void;
+    changeTodo: ChangeTodo
 }
 
-export const TodoItem: React.FC<TodoItemProp> = ({todo}) => {
+export const TodoItem: React.FC<TodoItemProp> = ({todo, changeTodo}) => {
     return (
-        <div>
-            <input type="checkbox" checked={todo.isCompleted} />
-            <p style={{textDecoration: todo.isCompleted ? "line-through" : "none"}}>{todo.item}</p>
-            <button>Add</button>
+        <div style={{textDecoration: todo.isCompleted ? "line-through" : "none"}}>
+            <input type="checkbox" checked={todo.isCompleted} onChange={() => changeTodo(todo)} />
+            {todo.item}
+            {/* <button>Add</button> */}
         </div>
     );
 }
