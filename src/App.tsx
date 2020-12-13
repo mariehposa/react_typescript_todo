@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { TodoItem } from './components/todo/todoItem';
 import { Todo } from "./components/utils/types";
 
@@ -8,6 +8,8 @@ const data: Array<Todo> = [
 ]
 
 const App: React.FC = () => {
+  const [ todo, setTodo ] = useState(data)
+  
   return (
     <>
       <TodoItem todo={data[0]}/>
