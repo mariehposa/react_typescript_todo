@@ -8,13 +8,14 @@ interface AddTodoProps {
 export const TodoForm: React.FC<AddTodoProps> = ({addTodo}) => {
     const [ newTodo, setNewTodo ] = useState('');
 
-    const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
-        setNewTodo(e.target.value)
+    const handleInput = (event: ChangeEvent<HTMLInputElement>) => {
+        setNewTodo(event.target.value)
     }
 
-    const handleSubmit = (e: FormEvent<HTMLButtonElement>) => {
-        // e.preventDefault()
+    const handleSubmit = (event: FormEvent<HTMLButtonElement>) => {
+        event.preventDefault()
         addTodo(newTodo)
+        setNewTodo('')
     }
 
     return (
