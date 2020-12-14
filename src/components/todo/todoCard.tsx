@@ -10,7 +10,7 @@ export const TodoCard: React.FC<TodoItemProp> = ({todo, changeTodo}) => {
     return (
         <div>
             <input type="checkbox" checked={todo.isCompleted} onChange={() => changeTodo(todo)} />
-            <p style={{textDecoration: todo.isCompleted ? "line-through" : "none"}}>{todo.item}</p>
+            <p style={{textDecoration: todo.isCompleted ? "line-through" : "none"}} onClick={() => changeTodo(todo)}>{todo.item}</p>
             <p>x</p>
         </div>
     );
