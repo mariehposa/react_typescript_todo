@@ -3,7 +3,7 @@ import { TodoCard } from './todoCard';
 import { ChangeTodo, AddTodo, RemoveTodo } from "../utils/types";
 import { TodoForm } from './todoForm';
 import { Data } from "../utils/data";
-import './todo.css'
+import './todo.scss'
 
 export const TodoList = () => {
     const [ todos, setTodos ] = useState(Data)
