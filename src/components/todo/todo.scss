@@ -39,6 +39,56 @@
         border-bottom-left-radius: 0;
         border: white;
         color: #fff;
-font-size: 15px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.3s;
+        background: #d9d9d9;
+        color: #555;
     }
+
+    button:hover {
+        background-color: #bbb;
+    }
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+	padding: 8px 20px;
+	background: #eee;
+	font-size: 18px;
+    transition: 0.2s;
+    
+    div {
+        display: flex;
+    }
+}
+
+
+.card:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+.card:hover {
+    background: #ddd;
+}
+
+.card.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+.card.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
 }
