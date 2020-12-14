@@ -5,7 +5,7 @@ interface AddTodoProps {
     addTodo: AddTodo;
 }
 
-export const TodoForm: React.FC<AddTodoProps> = () => {
+export const TodoForm: React.FC<AddTodoProps> = ({addTodo}) => {
     const [ newTodo, setNewTodo ] = useState('');
 
     const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
@@ -13,13 +13,14 @@ export const TodoForm: React.FC<AddTodoProps> = () => {
     }
 
     const handleSubmit = (e: FormEvent<HTMLButtonElement>) => {
-        e.preventDefault()
+        // e.preventDefault()
+        addTodo(newTodo)
     }
 
     return (
         <div>
             <input type="text" value={newTodo} onChange={handleInput} />
-            <button type="submit" >Add todo</button>
+            <button type="submit" onClick={handleSubmit}>Add todo</button>
         </div>
     );
 }

@@ -25,7 +25,9 @@ export const TodoList = () => {
     }
 
     const addTodo: AddTodo = (newTodo) => {
-        setTodos([...todos, {item: newTodo, isCompleted: false}])
+        if (newTodo !== '') {
+            setTodos([...todos, {item: newTodo, isCompleted: false}])
+        }
     }
 
     return (
