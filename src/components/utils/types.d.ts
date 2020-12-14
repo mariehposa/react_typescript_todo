@@ -1,6 +1,6 @@
 export type Todo = {
-    item: string,
-    isCompleted: boolean
+    item: string;
+    isCompleted: boolean;
 };
 
 export type ChangeTodo = (selectedTodo: Todo) => void;

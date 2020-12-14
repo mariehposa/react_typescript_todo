@@ -10,16 +10,14 @@ const data: Array<Todo> = [
 const App: React.FC = () => {
   const [ todo, setTodo ] = useState(data)
 
-  const changeTodo: ChangeTodo = (selectedTodo) => {
+  const changeTodo: ChangeTodo = selectedTodo => {
     const newTodo = todo.map(todo => {
       if (todo === selectedTodo) { 
-        console.log('toggle')
         return {
           ...todo, 
           isCompleted: !todo.isCompleted
         }
       }
-      console.log('untoggle')
       return todo
     })
     setTodo(newTodo)
