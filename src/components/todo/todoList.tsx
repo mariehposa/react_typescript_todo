@@ -26,10 +26,15 @@ export const TodoList = () => {
         }
     }
 
+    const removeTodo = (item) => {
+        const newList = todos.filter(currentTodo => {currentTodo.item !== item })
+        setTodos(newList)
+    }
+
     return (
         <div>
             {
-                todos.map(todo => { return <TodoCard  key={todo.item} todo={todo} changeTodo={changeTodo} /> })
+                todos.map(todo => { return <TodoCard  key={todo.item} todo={todo} changeTodo={changeTodo} removeTodo={removeTodo} /> })
             }
             <TodoForm addTodo={addTodo} />
         </div>
