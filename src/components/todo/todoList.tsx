@@ -23,6 +23,10 @@ export const TodoList = () => {
         setTodos(newTodo)
     }
 
+    const addTodo = (newTodo) => {
+        setTodos([...todos, {item: newTodo, isCompleted: false}])
+    }
+
     return (
         <div>
             {
