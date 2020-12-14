@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import TodoCard from './todoCard';
+import { TodoCard } from './todoCard';
 import { Todo, ChangeTodo } from "../utils/types";
 
 const data: Array<Todo> = [
@@ -14,8 +14,8 @@ export const TodoList = () => {
         const newTodo = todos.map(todo => {
         if (todo === selectedTodo) { 
             return {
-            ...todo, 
-            isCompleted: !todo.isCompleted
+                ...todo, 
+                isCompleted: !todo.isCompleted
             }
         }
         return todo
@@ -26,7 +26,7 @@ export const TodoList = () => {
     return (
         <div>
             {
-                todos.map(todo => { <TodoCard  key={todo.item} todo={todo} changeTodo={changeTodo} /> })
+                todos.map(todo => { return <TodoCard  key={todo.item} todo={todo} changeTodo={changeTodo} /> })
             }
         </div>
     );
