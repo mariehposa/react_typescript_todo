@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { TodoCard } from './todoCard';
-import { ChangeTodo, AddTodo } from "../utils/types";
+import { ChangeTodo, AddTodo, RemoveTodo } from "../utils/types";
 import { TodoForm } from './todoForm';
 import { Data } from "../utils/data";
 
@@ -26,8 +26,8 @@ export const TodoList = () => {
         }
     }
 
-    const removeTodo = (item) => {
-        const newList = todos.filter(currentTodo => {currentTodo.item !== item })
+    const removeTodo: RemoveTodo = (item) => {
+        const newList = todos.filter(currentTodo => currentTodo.item !== item )
         setTodos(newList)
     }
 
