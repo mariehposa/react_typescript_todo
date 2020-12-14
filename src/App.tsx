@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TodoItem } from './components/todo/todoItem';
+import { TodoCard } from './components/todo/todoCard';
 import { ChangeTodo, Todo } from "./components/utils/types";
 
 const data: Array<Todo> = [
@@ -25,8 +25,8 @@ const App: React.FC = () => {
 
   return (
     <>
-      <TodoItem todo={data[0]} changeTodo={changeTodo} />
-      <TodoItem todo={data[1]} changeTodo={changeTodo} />
+      <TodoCard todo={data[0]} changeTodo={changeTodo} />
+      <TodoCard todo={data[1]} changeTodo={changeTodo} />
     </>
   );
 }
