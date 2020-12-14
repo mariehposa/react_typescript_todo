@@ -1,15 +1,11 @@
 import React, {useState} from 'react';
 import { TodoCard } from './todoCard';
-import { Todo, ChangeTodo, AddTodo } from "../utils/types";
+import { ChangeTodo, AddTodo } from "../utils/types";
 import { TodoForm } from './todoForm';
-
-const data: Array<Todo> = [
-    {item: 'Wash the dishes', isCompleted: true},
-    {item: 'Watch typescript tutorial', isCompleted: false}
-]
+import { Data } from "../utils/data";
 
 export const TodoList = () => {
-    const [ todos, setTodos ] = useState(data)
+    const [ todos, setTodos ] = useState(Data)
 
     const changeTodo: ChangeTodo = selectedTodo => {
         const newTodo = todos.map(todo => {
