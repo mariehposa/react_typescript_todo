@@ -8,20 +8,6 @@ const data: Array<Todo> = [
 ]
 
 const App: React.FC = () => {
-  const [ todo, setTodo ] = useState(data)
-
-  const changeTodo: ChangeTodo = selectedTodo => {
-    const newTodo = todo.map(todo => {
-      if (todo === selectedTodo) { 
-        return {
-          ...todo, 
-          isCompleted: !todo.isCompleted
-        }
-      }
-      return todo
-    })
-    setTodo(newTodo)
-  }
 
   return (
     <>
