@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Todoform = () => {
+export const TodoForm = () => {
     return (
         <div>
             <input type="text" />
