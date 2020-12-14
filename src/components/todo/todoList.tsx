@@ -3,7 +3,7 @@ import { TodoCard } from './todoCard';
 import { ChangeTodo, AddTodo, RemoveTodo } from "../utils/types";
 import { TodoForm } from './todoForm';
 import { Data } from "../utils/data";
-import CardContent from '@material-ui/core/CardContent';
+import './todo.css'
 
 export const TodoList = () => {
     const [ todos, setTodos ] = useState(Data)
@@ -33,11 +33,13 @@ export const TodoList = () => {
     }
 
     return (
-        <CardContent>
-            {
-                todos.map(todo => { return <TodoCard  key={todo.item} todo={todo} changeTodo={changeTodo} removeTodo={removeTodo} /> })
-            }
+        <div className="overall">
             <TodoForm addTodo={addTodo} />
-        </CardContent>
+            <div>
+                {
+                    todos.map(todo => { return <TodoCard  key={todo.item} todo={todo} changeTodo={changeTodo} removeTodo={removeTodo} /> })
+                }
+            </div>
+        </div>
     );
 }
