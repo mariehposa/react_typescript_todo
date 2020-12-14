@@ -20,7 +20,7 @@
         justify-content: center;
         margin-top: 180px;
     }
-    
+
     input {
         width: 70%;
         padding: 8px;
@@ -28,6 +28,7 @@
         border-radius: 3px;
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
+        font-size: 15px;
     }
 
     button {
@@ -37,5 +38,7 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         border: white;
+        color: #fff;
+font-size: 15px;
     }
 }
