@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import { TodoCard } from './todoCard';
-import { Todo, ChangeTodo } from "../utils/types";
+import { Todo, ChangeTodo, AddTodo } from "../utils/types";
+import { TodoForm } from './todoForm';
 
 const data: Array<Todo> = [
     {item: 'Wash the dishes', isCompleted: true},
@@ -23,7 +24,7 @@ export const TodoList = () => {
         setTodos(newTodo)
     }
 
-    const addTodo = (newTodo) => {
+    const addTodo: AddTodo = (newTodo) => {
         setTodos([...todos, {item: newTodo, isCompleted: false}])
     }
 
@@ -32,6 +33,7 @@ export const TodoList = () => {
             {
                 todos.map(todo => { return <TodoCard  key={todo.item} todo={todo} changeTodo={changeTodo} /> })
             }
+            <TodoForm addTodo={addTodo} />
         </div>
     );
 }
