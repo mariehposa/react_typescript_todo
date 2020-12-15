@@ -1,6 +1,5 @@
 import React from 'react';
 import { ChangeTodo, RemoveTodo, Todo } from "../utils/types";
-
 interface TodoItemProp {
     todo: Todo;
     changeTodo: ChangeTodo;
@@ -11,10 +10,14 @@ export const TodoCard: React.FC<TodoItemProp> = ({todo, changeTodo, removeTodo})
     return (
         <div className="card">
             <div>
-                <input type="checkbox" checked={todo.isCompleted} onChange={() => changeTodo(todo)} />
+                <label className="checkbox">
+                    <input type="checkbox" checked={todo.isCompleted} onChange={() => changeTodo(todo)} />
+                    {/* <input type="checkbox" /> */}
+                    <span></span>
+                </label>
                 <p style={{textDecoration: todo.isCompleted ? "line-through" : "none"}} onClick={() => changeTodo(todo)}>{todo.item}</p>
             </div>
-            <p onClick={() => removeTodo(todo.item)}>x</p>
+            <p className="close" onClick={() => removeTodo(todo.item)}>x</p>
         </div>
     );
 }
