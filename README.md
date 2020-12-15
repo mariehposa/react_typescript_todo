@@ -25,9 +25,17 @@ Version Control (Git)
 
 ## Deployment
 
-* The landing page was deployed with [Vercel](https://hackton.co/)
+* The app was deployed with [Vercel](https://react-typescript-todo-ecru.vercel.app/)
 
 ## Technology Stack
 
 * [React](https://reactjs.org/) - A web framework.
-* [TypeScript](https://redux-saga.js.org/) - An open-source language which builds on JavaScript.
+* [TypeScript](https://www.typescriptlang.org/) - An open-source language which builds on JavaScript.
+
+## Contributing
+
+Please check [CONTRIBUTING.md](https://github.com/mariehposa/react_typescript_todo/pulls) for submitting pull requests to us.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
