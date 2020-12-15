@@ -20,6 +20,7 @@ export const TodoForm: React.FC<AddTodoProps> = ({addTodo}) => {
 
     return (
         <div className="header">
+            <p>My Todo</p>
             <div>
                 <input type="text" value={newTodo} onChange={handleInput} />
                 <button type="submit" onClick={handleSubmit}>Add todo</button>
