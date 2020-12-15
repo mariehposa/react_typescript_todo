@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+# React TypeScript Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A todo app created with React and TypeScript.
+
+![image](https://user-images.githubusercontent.com/33374159/102248590-9c04a780-3f01-11eb-91ff-a701da9472f7.png)
+
 
 ## Available Scripts
 
