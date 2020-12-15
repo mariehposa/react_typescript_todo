@@ -17,6 +17,7 @@ CSS
 React
 Typescript
 Version Control (Git)
+```
 
 ### Installation
 
